@@ -8,15 +8,17 @@
 <body>
     <script>
     
-    let userAns = prompt("ROCK, PAPER or SISSOR!");
+    let userAns = prompt("ROCK, PAPER or SISSOR!"); 
 
         userAns = userAns.toUpperCase();
-        let compAns = Math.floor(Math.random()*100);
-        if(userAns != "ROCK")
+        let compAns = Math.floor(Math.random()*100); //Generates a random number for computer answer
+
+
+        if(userAns != "ROCK" && userAns!="PAPER" && userAns!="SISSOR") //Checks for valid input
         {
             alert("Wrong Input Provided");
         }
-        else
+        else // Assigns computer it's choice of answer
         {
             if(compAns%2==0 && compAns%3!=0)
             {
@@ -32,6 +34,8 @@
             }
         }
 
+
+        //Find outs the winner by calculating the probabilities
         if((compAns==="ROCK" && userAns =="SISSOR") || (compAns==="SISSOR" && userAns =="ROCK"))
         {
             if(compAns==="ROCK")
