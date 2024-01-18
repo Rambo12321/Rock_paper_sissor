@@ -3,10 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Sissors</title>
-    <script src="prac.html"></script>
+    <title>ROCK PAPER SISSOR'S</title>
 </head>
 <body>
+    <script>
     
+    let game = (a) =>
+    {
+        let userAns = prompt("ROCK, PAPER or SISSOR!");
+        userAns = userAns.toUpperCase();
+        if(userAns != "ROCK")
+        {
+            alert("Wrong Input Provided");
+        }
+        else
+        {
+            let compAns = Math.random()*100;
+
+            if(compAns%2==0 && compAns%3!=0)
+            {
+                compAns="ROCK";
+            }
+            else if(compAns%3==0)
+            {
+                compAns="PAPER";
+            }
+            else
+            {
+                compAns="SISSOR";
+            }
+        }
+
+        if((compAns==="ROCK" && userAns =="SISSOR") || (compAns==="SISSOR" && userAns =="ROCK"))
+        {
+            if(compAns==="ROCK")
+            {
+                console.log("Computer wins!!! Sh*thead!!!");
+                console.log(compAns + " Beats - " + userAns);
+            }
+            else{
+                console.log("Huumannnnnnn winsss!!!!!!!!!!!!");
+                console.log(userAns + " Beats - " + compAns);
+            }
+        }
+        else if((compAns==="PAPER" && userAns =="ROCK") || (compAns==="ROCK" && userAns =="PAPER"))
+        {
+            if(compAns==="PAPER")
+            {
+                console.log("Computer wins!!! Sh*thead!!!");
+                console.log(compAns + " Beats - " + userAns);
+            }
+            else{
+                console.log("Huumannnnnnn winsss!!!!!!!!!!!!");
+                console.log(userAns + " Beats - " + compAns);
+            }
+        }
+        else if((compAns==="PAPER" && userAns =="SISSOR") || (compAns==="SISSOR" && userAns =="PAPER"))
+        {
+            if(compAns==="SISSOR")
+            {
+                console.log("Computer wins!!! Sh*thead!!!");
+                console.log(compAns + " Beats - " + userAns);
+            }
+            else{
+                console.log("Huumannnnnnn winsss!!!!!!!!!!!!");
+                console.log(userAns + " Beats - " + compAns);
+            }
+        }
+        else
+        {
+            console.log("It's a biiiiggggg fat drawwwww......");
+        }
+    }
+    
+    </script>
+    
+    <p style="padding: 45%; font-weight: 700; font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Open the Console to Play the game</p>
 </body>
 </html>
