@@ -8,18 +8,16 @@
 <body>
     <script>
     
-    let game = (a) =>
-    {
-        let userAns = prompt("ROCK, PAPER or SISSOR!");
+    let userAns = prompt("ROCK, PAPER or SISSOR!");
+
         userAns = userAns.toUpperCase();
+        let compAns = Math.floor(Math.random()*100);
         if(userAns != "ROCK")
         {
             alert("Wrong Input Provided");
         }
         else
         {
-            let compAns = Math.random()*100;
-
             if(compAns%2==0 && compAns%3!=0)
             {
                 compAns="ROCK";
@@ -74,10 +72,9 @@
         {
             console.log("It's a biiiiggggg fat drawwwww......");
         }
-    }
     
     </script>
     
-    <p style="padding: 45%; font-weight: 700; font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Open the Console to Play the game</p>
+    <p style="padding: 10%; font-weight: 700; font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Open the Console to Play the game</p>
 </body>
 </html>
